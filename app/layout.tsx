@@ -24,6 +24,7 @@ export default async function RootLayout({
         <nav>
           {!!session && <Logout />}
           {!session && <Link href="/login">Login</Link>}
+          { <Link href="/dashboard">Dashboard</Link>}
         </nav>
         {children}
       </body>
