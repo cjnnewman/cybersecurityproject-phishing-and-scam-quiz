@@ -1,5 +1,5 @@
 "use client"
-const data_json = require('../../../public/data.json');
+import data_json from '../../../public/data.json';
 
 var counter = 0
 var assessment_type = 0
@@ -13,9 +13,9 @@ function testButtonPress(){
 
 
   let image_element = document.getElementById("example_image") as HTMLImageElement
-  image_element.src=data_json.AssessmentQuestions[0].emails[counter].location_annotate
+  image_element.src=data_json.AssessmentQuestions.emails[counter].location_annotate
 
-  let phish_value = data_json.AssessmentQuestions[0].emails[counter].phishing
+  let phish_value = data_json.AssessmentQuestions.emails[counter].phishing
 
   // if example is phishing
   if (phish_value == true){ 
@@ -33,7 +33,7 @@ function testButtonPress(){
 }
 
 function next(){
-  if (counter+1 < Object.keys(data_json.AssessmentQuestions[0].emails).length){
+  if (counter+1 < Object.keys(data_json.AssessmentQuestions.emails).length){
 
     // This is where the end assessment would be!
     counter++
@@ -48,7 +48,7 @@ function next(){
   let continue_button = document.getElementById("continueButton") as HTMLElement
 
   let image_element = document.getElementById("example_image") as HTMLImageElement
-  image_element.src=data_json.AssessmentQuestions[0].emails[counter].location
+  image_element.src=data_json.AssessmentQuestions.emails[counter].location
 
   // reset CSS
   phish_button.style.background="blue"

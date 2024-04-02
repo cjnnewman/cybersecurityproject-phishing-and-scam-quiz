@@ -1,5 +1,5 @@
 "use client"
-const data_json = require('../../../public/data.json');
+import data_json from '../../../public/data.json';
 
 var counter = 0
 var assessment_type = 0
@@ -13,9 +13,9 @@ function testButtonPress(){
 
 
   let image_element = document.getElementById("example_image") as HTMLImageElement
-  image_element.src=data_json.AssessmentQuestions[1].texts[counter].location_annotate
+  image_element.src=data_json.AssessmentQuestions.texts[counter].location_annotate
 
-  let phish_value = data_json.AssessmentQuestions[1].texts[counter].phishing
+  let phish_value = data_json.AssessmentQuestions.texts[counter].phishing
 
   // if example is phishing
   if (phish_value == true){ 
@@ -33,7 +33,7 @@ function testButtonPress(){
 }
 
 function next(){
-  if (counter+1 < Object.keys(data_json.AssessmentQuestions[1].texts).length){
+  if (counter+1 < Object.keys(data_json.AssessmentQuestions.texts).length){
 
     // This is where the end assessment would be!
     counter++
@@ -48,7 +48,7 @@ function next(){
   let continue_button = document.getElementById("continueButton") as HTMLElement
 
   let image_element = document.getElementById("example_image") as HTMLImageElement
-  image_element.src=data_json.AssessmentQuestions[1].texts[counter].location
+  image_element.src=data_json.AssessmentQuestions.texts[counter].location
 
   // reset CSS
   phish_button.style.background="blue"
@@ -60,29 +60,26 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
+    <main className={"bg-slate-200"}>
 
-      <div id="topBar" className="div1">
-        <h1>Cybersecurity Assessment</h1> 
+      <div id="topBar" className={""}>
+        <h1 className={""}>Cybersecurity Assessment</h1> 
+        <Link href="/home">
+            <button className={"bg-cyan-800 hover:bg-cyan-700"}>Home</button>
+        </Link>
         <Link href="/">
-          <button>Logout</button>
+          <button className={"bg-red-600 hover:bg-red-500 mr-2"}>Logout</button>
         </Link> 
       </div>
 
-      <div>
-          <div id="questionBox" className="div1">
-
-            <Link href="/home">
-              <button>Home</button>
-            </Link>
-
-            <img id="example_image" src="/texts/text1.png"></img>
-
-            <button id="phishButton" onClick={testButtonPress}>Phishing</button>
-
-            <button id="legitButton" onClick={testButtonPress}>Legit</button>
-
-            <button id="continueButton" className ="buttonHidden" onClick={next}>Continue</button>
+      <div className={"assessment-body"}>
+          <div id="questionBox" className={""}>
+            <img id="example_image" src="/texts/text1.png" className={"flex-auto"}></img>
+            <div className={"assessment-buttons sm:flex-row"}>
+                <button id="phishButton" onClick={testButtonPress} className={""}>Phishing</button>
+                <button id="legitButton" onClick={testButtonPress} className={""}>Legit</button>
+                <button id="continueButton" className ="buttonHidden" onClick={next}>Continue</button>
+            </div>
 
 
           </div>

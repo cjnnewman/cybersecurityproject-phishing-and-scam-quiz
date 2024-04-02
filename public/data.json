@@ -1,5 +1,5 @@
 {
-    "AssessmentQuestions":[{
+    "AssessmentQuestions":{
         "emails":[
             {
                 "location": "/emails/email1.png",
@@ -32,71 +32,70 @@
                 "legit":false
             }
             ],
-            "texts":[
-                {
-                    "location": "/texts/text1.png",
-                    "location_annotate": "/texts/text1a.png", 
-                    "phishing": true,
-                    "legit":false
-                },
-                {
-                    "location": "/texts/text2.png",
-                    "location_annotate": "/texts/text2a.png", 
-                    "phishing": true,
-                    "legit":false
-                },
-                {
-                    "location": "/texts/text3.png",
-                    "location_annotate": "/texts/text3a.png", 
-                    "phishing": true,
-                    "legit":false
-                },
-                {
-                    "location": "/texts/text4.png",
-                    "location_annotate": "/texts/text4a.png", 
-                    "phishing": true,
-                    "legit":false
-                },
-                {
-                    "location": "/texts/text5.png",
-                    "location_annotate": "/texts/text5a.png", 
-                    "phishing": true,
-                    "legit":false
-                }
-            ],
-            "ads":[
-                {
-                    "location": "/ads/ad1.png",
-                    "location_annotate": "/ads/ad1a.png", 
-                    "phishing": true,
-                    "legit":false
-                },
-                {
-                    "location": "/ads/ad2.png",
-                    "location_annotate": "/ads/ad2a.png", 
-                    "phishing": true,
-                    "legit":false
-                },
-                {
-                    "location": "/ads/ad3.png",
-                    "location_annotate": "/ads/ad3a.png", 
-                    "phishing": true,
-                    "legit":false
-                },
-                {
-                    "location": "/ads/ad4.png",
-                    "location_annotate": "/ads/ad4a.png", 
-                    "phishing": true,
-                    "legit":false
-                },
-                {
-                    "location": "/ads/ad5.png",
-                    "location_annotate": "/ads/ad5a.png", 
-                    "phishing": true,
-                    "legit":false
-                }
-            ]
-        }
-    ]
+        "texts":[
+            {
+                "location": "/texts/text1.png",
+                "location_annotate": "/texts/text1a.png", 
+                "phishing": true,
+                "legit":false
+            },
+            {
+                "location": "/texts/text2.png",
+                "location_annotate": "/texts/text2a.png", 
+                "phishing": true,
+                "legit":false
+            },
+            {
+                "location": "/texts/text3.png",
+                "location_annotate": "/texts/text3a.png", 
+                "phishing": true,
+                "legit":false
+            },
+            {
+                "location": "/texts/text4.png",
+                "location_annotate": "/texts/text4a.png", 
+                "phishing": true,
+                "legit":false
+            },
+            {
+                "location": "/texts/text5.png",
+                "location_annotate": "/texts/text5a.png", 
+                "phishing": true,
+                "legit":false
+            }
+        ],
+        "ads":[
+            {
+                "location": "/ads/ad1.png",
+                "location_annotate": "/ads/ad1a.png", 
+                "phishing": true,
+                "legit":false
+            },
+            {
+                "location": "/ads/ad2.png",
+                "location_annotate": "/ads/ad2a.png", 
+                "phishing": true,
+                "legit":false
+            },
+            {
+                "location": "/ads/ad3.png",
+                "location_annotate": "/ads/ad3a.png", 
+                "phishing": true,
+                "legit":false
+            },
+            {
+                "location": "/ads/ad4.png",
+                "location_annotate": "/ads/ad4a.png", 
+                "phishing": true,
+                "legit":false
+            },
+            {
+                "location": "/ads/ad5.png",
+                "location_annotate": "/ads/ad5a.png", 
+                "phishing": true,
+                "legit":false
+            }
+        ]
+    }
 }
 
