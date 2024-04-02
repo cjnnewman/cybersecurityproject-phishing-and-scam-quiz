@@ -68,6 +68,11 @@ body {
   img {
     max-width: 100%;
     flex-grow: initial;
+    border-radius: 0.25rem;
+  }
+
+  #questionBox img {
+    margin-bottom: 1rem;
   }
   
   #myDIV {
