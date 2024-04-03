@@ -23,7 +23,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <nav>
           {!!session && <Logout />}
-          {!session && <Link href="/login">Login</Link>}
+          {!session && <Link href="/login-register">Login</Link>}
           { <Link href="/dashboard">Dashboard</Link>}
         </nav>
         {children}

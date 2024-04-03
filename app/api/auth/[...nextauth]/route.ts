@@ -8,7 +8,7 @@ const handler = NextAuth({
     strategy: 'jwt',
   },
   pages: {
-    signIn: '/login',
+    signIn: '/login-register',
   },
   providers: [
     CredentialsProvider({
@@ -17,7 +17,6 @@ const handler = NextAuth({
         password: {},
       },
       async authorize(credentials, req) {
-        //
         const response = await sql`
         SELECT * FROM users WHERE email=${credentials?.email}`;
         const user = response.rows[0];
@@ -26,8 +25,6 @@ const handler = NextAuth({
           credentials?.password || '',
           user.password
         );
-
-        console.log({ passwordCorrect });
 
         if (passwordCorrect) {
           return {

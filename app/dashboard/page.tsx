@@ -1,8 +1,15 @@
 'use client';
 
 export default async function DashboardPage() {
- 
-  // authenticate using middleware instead, I think it is better but
+
+
+  return (    
+    <div>
+    </div>
+  );
+}
+
+// authenticate using middleware instead, I think it is better but
   // leave this code for now!
   
   /*  const session = await getServerSession();
@@ -17,8 +24,3 @@ export default async function DashboardPage() {
       <div>you are logged in</div>
     )
   } */
-
-  return (
-    <div>dashboard</div>
-  );
-}

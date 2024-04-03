@@ -2,10 +2,12 @@
 
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 
-export default function Form() {
+export default function LoginForm() {
   const router = useRouter();
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -15,12 +17,14 @@ export default function Form() {
       redirect: false,
     });
 
-    console.log({ response });
     if (!response?.error) {
-      router.push('/');
+      router.push('./dashboard');
       router.refresh();
+    } else {
+      setErrorMessage('Invalid Credentials');
     }
   };
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -30,13 +34,16 @@ export default function Form() {
         name="email"
         className="border border-black text-black"
         type="email"
+        placeholder="Email"
       />
       <input
         name="password"
-        className="border border-black  text-black"
+        className="border border-black text-black"
         type="password"
+        placeholder="Password"
       />
       <button type="submit">Login</button>
+      {errorMessage && (<p style={{ textAlign: 'center', color: 'red', marginTop: '0.5rem' }}>{errorMessage}</p>)}
     </form>
   );
 }
