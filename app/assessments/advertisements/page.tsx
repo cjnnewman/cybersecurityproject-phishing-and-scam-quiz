@@ -62,27 +62,25 @@ export default function Home() {
   return (
     <main>
 
-      <div id="topBar" className="div1">
-        <h1>Cybersecurity Assessment</h1> 
-        <Link href="/">
-          <button>Logout</button>
-        </Link> 
-      </div>
+    <div id="topBar" className={""}>
+      <h1 className={""}>Cybersecurity Assessment</h1> 
+      <Link href="/home">
+          <button className={"bg-cyan-800 hover:bg-cyan-700"}>Home</button>
+      </Link>
+      <Link href="/">
+        <button className={"bg-red-600 hover:bg-red-500 mr-2"}>Logout</button>
+      </Link> 
+    </div>
 
-      <div>
-          <div id="questionBox" className="div1">
-
-            <Link href="/home">
-              <button>Home</button>
-            </Link>
+    <div className={"assessment-body"}>
+          <div id="questionBox">
 
             <img id="example_image" src="/ads/ad1.png"></img>
-
-            <button id="phishButton" onClick={testButtonPress}>Phishing</button>
-
-            <button id="legitButton" onClick={testButtonPress}>Legit</button>
-
-            <button id="continueButton" className ="buttonHidden" onClick={next}>Continue</button>
+            <div className={"assessment-buttons sm:flex-row"}>
+                <button id="phishButton" onClick={testButtonPress} className={""}>Phishing</button>
+                <button id="legitButton" onClick={testButtonPress} className={""}>Legit</button>
+                <button id="continueButton" className ="buttonHidden" onClick={next}>Continue</button>
+            </div>
 
 
           </div>
