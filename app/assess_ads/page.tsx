@@ -2,7 +2,7 @@
 export default function assess_ads() {
   return (
     <main>
-        <p>We're getting there!</p>
+        <p>Under construction</p>
     </main>
   );
 }
