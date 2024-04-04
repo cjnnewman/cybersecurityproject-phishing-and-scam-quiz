@@ -66,7 +66,8 @@ body {
   }
 
   img {
-    max-width: 100%;
+    object-fit: contain;
+    max-height: 800px;
     flex-grow: initial;
     border-radius: 0.25rem;
   }
