@@ -1,3 +1,175 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-image: url("../public/fgcu.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+/*Will Home Page CSS*/
+
+.topBar {
+    background-color: navy;
+    width: auto;
+    color: white;
+    font-size: xx-large;
+    flex: auto;
+}
+
+.container {
+    width:auto;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.boxRight {
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+    padding: 20px; /* if you want space between the images */
+}
+.boxLeft {
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+    padding: 20px; /* if you want space between the images */
+}
+
+.button {
+    background-color: blue; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.homeBox {
+    width: 80%;
+    background-color: white;
+    padding: 10px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*Jacob Assessment Page CSS*/
+
+#topBar {
+    display: flex;
+    flex-direction: row;
+    color: rgb(248 250 252);
+    background: rgb(30 41 59);
+}
+
+#topBar h1 {
+    flex-grow: 1;
+    vertical-align: middle;
+    align-self: center;
+    margin-left: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+#topBar button {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.assessment-body {
+    border-radius: 0.25rem;
+    padding: 0;
+    margin: 0;
+}
+
+#questionBox {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.assessment-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.div1 {
+    background-color: white;
+    width: 50%;
+    border: 15px solid blue;
+    padding: 20px;
+    margin: 20px;
+}
+
+.div2 {
+    background-color: lightgray;
+    width: 50%;
+    border: 15px solid blue;
+    padding: 20px;
+    margin: 20px;
+}
+
+img {
+    object-fit: contain;
+    max-height: 800px;
+    flex-grow: initial;
+    border-radius: 0.25rem;
+}
+
+#questionBox img {
+    margin-bottom: 1rem;
+}
+
+#myDIV {
+    width: 300px;
+    height: 200px;
+    background: red;
+    animation: mymove 2;
+}
+
+@keyframes mymove {
+    from {background-color: red;}
+    to {background-color: blue;}
+}
+
+button {
+    animation: none 2;
+    border: none;
+    border-radius: 0.25rem;
+        padding: 15px 32px;
+    margin: 5px;
+        text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.assessment-buttons button {
+    background-color: indigo;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(106, 63, 136);
+}
+
+.buttonHidden {
+    visibility: hidden;
+}
