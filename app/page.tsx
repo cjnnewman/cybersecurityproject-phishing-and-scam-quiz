@@ -1,9 +1,13 @@
+import Link from "next/link"
 
 export default function Home() {
   return (
     <main className="h-screen flex items-center justify-center">
       <div>
-        test
+        <p className="text-4xl font-black text-gray-900 dark:text-white">Test</p>
+        <Link href="/login-register">
+              <button className="button">Logout</button>
+            </Link> 
       </div>
     </main>
   )

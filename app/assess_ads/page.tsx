@@ -1,8 +1,11 @@
+import Link from "next/link";
 
 export default function assess_ads() {
   return (
     <main>
-        <p>Under construction</p>
+      <div>
+        <p>Under Construction!</p>
+      </div>
     </main>
   );
 }

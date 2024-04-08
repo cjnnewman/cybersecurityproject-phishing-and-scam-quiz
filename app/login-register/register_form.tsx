@@ -23,13 +23,15 @@ export default function RegisterForm() {
         name="email"
         className="border border-black text-black"
         type="email"
+        placeholder="Email"
       />
       <input
         name="password"
+        placeholder="Password"
         className="border border-black  text-black"
         type="password"
       />
-      <button type="submit">Register</button>
+      <button type="submit" className="button">Register</button>
     </form>
   );
 }

@@ -42,7 +42,7 @@ export default function LoginForm() {
         type="password"
         placeholder="Password"
       />
-      <button type="submit">Login</button>
+      <button type="submit" className="button">Login</button>
       {errorMessage && (<p style={{ textAlign: 'center', color: 'red', marginTop: '0.5rem' }}>{errorMessage}</p>)}
     </form>
   );
