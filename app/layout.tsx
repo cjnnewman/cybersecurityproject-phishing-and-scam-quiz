@@ -30,10 +30,13 @@ export default async function RootLayout({
                 <h1>Cybersecurity Assessment</h1> 
               </div>
               <div className="boxRight">
-                <Link href="/home">
+                <Link href="/">
+                  <button className="button">Welcome</button>
+                </Link> 
+                <Link href="/">
                   <button className="button">Home</button>
                 </Link> 
-                <Link href="/login-register">
+                <Link href="/">
                   <button className="button">Logout</button>
                 </Link> 
               </div>

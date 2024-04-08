@@ -5,9 +5,6 @@ export default function Home() {
     <main className="h-screen flex items-center justify-center">
       <div>
         <p className="text-4xl font-black text-gray-900 dark:text-white">Test</p>
-        <Link href="/login-register">
-              <button className="button">Logout</button>
-            </Link> 
       </div>
     </main>
   )

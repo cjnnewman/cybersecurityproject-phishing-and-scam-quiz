@@ -21,7 +21,7 @@ export default function Home() {
               <p className="border-8">Assessment score: {email_score} / {email_size}</p>
             </div>
             <div className="containerRight">
-              <Link href="/assess_email">
+              <Link href="/">
                 <button className="button">Email</button>
               </Link> 
             </div>
@@ -32,7 +32,7 @@ export default function Home() {
               <p className="border-8" >Assessment score: {text_score} / {text_size} </p>
             </div>
             <div className="containerRight">
-              <Link href="/assess_text">
+              <Link href="/">
                 <button className="button">Text</button>
               </Link> 
             </div>
@@ -43,7 +43,7 @@ export default function Home() {
               <p className="border-8">Assessment score: {ads_score} / {ad_size}</p>
             </div>
             <div className="containerRight">
-              <Link href="/assess_ads">
+              <Link href="/">
                 <button className="button">Scam Ads</button>
               </Link> 
             </div>
