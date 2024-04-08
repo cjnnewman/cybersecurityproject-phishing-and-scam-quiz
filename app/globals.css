@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
 body {
     background-image: url("../public/fgcu.jpeg");
     background-repeat: no-repeat;
@@ -10,7 +11,7 @@ body {
     background-position: center center;
 
 }
-
+*/
 p{
     font-size: 1.5em;
  }
