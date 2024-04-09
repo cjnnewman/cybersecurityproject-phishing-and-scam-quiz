@@ -18,8 +18,15 @@ p{
 
 /*Will Home Page CSS*/
 
+:root {
+    --main-blue: rgb(27, 70, 132);
+    --main-blue-light: rgb(35, 84, 152);
+    --main-green: rgb(0,121,76);
+}
+
 .topBar {
-    background-color: navy;
+    /* background-color: navy; */
+    background-color: var(--main-blue);
     width: auto;
     color: white;
     font-size: xx-large;
@@ -50,7 +57,8 @@ p{
 }
 
 .button {
-    background-color: blue; /* Green */
+    /* background-color: blue; Green */
+    background-color: var(--main-blue);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -172,7 +180,8 @@ button {
 }
 
 button:hover {
-    background-color: rgb(106, 63, 136);
+    /* background-color: rgb(106, 63, 136); */
+    background-color: var(--main-blue-light);
 }
 
 .buttonHidden {
