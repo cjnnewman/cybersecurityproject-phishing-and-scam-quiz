@@ -1,6 +1,8 @@
 "use client"
 import data_json from '../../public/data.json';
 
+const assessmentQuestions = data_json.AssessmentQuestions.ads;
+
 var counter = 0;
 
 let correct: number = 0;
@@ -39,7 +41,7 @@ function resetButtons() {
 }
 
 function onPhishingSelected() {
-  let phish_value = data_json.AssessmentQuestions.ads[counter].phishing;
+  let phish_value = assessmentQuestions[counter].phishing;
 
   if (answerSelected) return;
   displayContinueBttn();
@@ -48,7 +50,7 @@ function onPhishingSelected() {
 }
 
 function onLegitSelected() {
-  let phish_value = data_json.AssessmentQuestions.ads[counter].phishing;
+  let phish_value = assessmentQuestions[counter].phishing;
 
   if (answerSelected) return;
   displayContinueBttn();
@@ -58,7 +60,7 @@ function onLegitSelected() {
 
 function annotateImage() {
   let image_element = document.getElementById("example_image") as HTMLImageElement;
-  image_element.src=data_json.AssessmentQuestions.ads[counter].location_annotate;
+  image_element.src=assessmentQuestions[counter].location_annotate;
 }
 
 function displayContinueBttn() {
@@ -73,12 +75,12 @@ function displayContinueBttn() {
 
 function next(){
   counter++;
-  if (counter >= Object.keys(data_json.AssessmentQuestions.ads).length - 1) {
+  if (counter >= Object.keys(assessmentQuestions).length - 1) {
     let continue_button = document.getElementById("continueButton") as HTMLButtonElement;
     continue_button.textContent = "End Assessment";
   }
-  if (counter >= Object.keys(data_json.AssessmentQuestions.ads).length){
-    counter = Object.keys(data_json.AssessmentQuestions.ads).length - 1;
+  if (counter >= Object.keys(assessmentQuestions).length){
+    counter = Object.keys(assessmentQuestions).length - 1;
     onEndAssesment();
     return;
   }
@@ -90,7 +92,7 @@ function next(){
   resetButtons();
 
   let image_element = document.getElementById("example_image") as HTMLImageElement
-  image_element.src=data_json.AssessmentQuestions.ads[counter].location
+  image_element.src=assessmentQuestions[counter].location
 }
 
 export default function Home() {
