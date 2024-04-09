@@ -1,12 +1,16 @@
 "use client"
 import data_json from '../../public/data.json';
 
-var counter = 0
-var assessment_type = 0
+var counter = 0;
 
 let correct: number = 0;
 let incorrect: number = 0;
 let answerSelected: boolean = false;
+
+// Backend team look here: \/\/\/\/\/\/\/\/\/\/\/\/\/
+function onEndAssesment() {
+  // Put end assessment logic here.
+}
 
 function updateCorrectCounters(wasCorrect: boolean) {
   if (wasCorrect) {
@@ -19,8 +23,19 @@ function updateCorrectCounters(wasCorrect: boolean) {
   }
 }
 
-function markCorrect(button: HTMLElement, isCorrect: boolean) {
+function resetButtons() {
+  let phish_button = document.getElementById("phishButton") as HTMLButtonElement;
+  let legit_button = document.getElementById("legitButton") as HTMLButtonElement;
+  let continue_button = document.getElementById("continueButton") as HTMLButtonElement;
 
+  const defaultButtonStyle = "";
+
+  phish_button.className = defaultButtonStyle;
+  phish_button.disabled = false;
+  legit_button.className = defaultButtonStyle;
+  legit_button.disabled = false;
+  continue_button.style.visibility = "hidden";
+  answerSelected = false;
 }
 
 function onPhishingSelected() {
@@ -48,41 +63,23 @@ function annotateImage() {
 
 function displayContinueBttn() {
   answerSelected = true;
-  let continue_button = document.getElementById("continueButton") as HTMLElement;
+  let continue_button = document.getElementById("continueButton") as HTMLButtonElement;
+  let phish_button = document.getElementById("phishButton") as HTMLButtonElement;
+  let legit_button = document.getElementById("legitButton") as HTMLButtonElement;
   continue_button.style.visibility="visible";
-}
-
-function testButtonPress(){
-  let phish_button = document.getElementById("phishButton") as HTMLElement
-  let legit_button = document.getElementById("legitButton") as HTMLElement
-  let continue_button = document.getElementById("continueButton") as HTMLElement
-
-
-  let image_element = document.getElementById("example_image") as HTMLImageElement
-  image_element.src=data_json.AssessmentQuestions.ads[counter].location_annotate
-
-  let phish_value = data_json.AssessmentQuestions.ads[counter].phishing
-
-  // if example is phishing
-  if (phish_value == true){ 
-    phish_button.style.background="green"
-    legit_button.style.background="red"
-    continue_button.style.visibility="visible"
-  }
-
-  // if example is legit
-  else{ 
-    phish_button.style.background="red"
-    legit_button.style.background="green"
-    continue_button.style.visibility="visible"
-  }
+  phish_button.disabled = true;
+  legit_button.disabled = true;
 }
 
 function next(){
   counter++;
+  if (counter >= Object.keys(data_json.AssessmentQuestions.ads).length - 1) {
+    let continue_button = document.getElementById("continueButton") as HTMLButtonElement;
+    continue_button.textContent = "End Assessment";
+  }
   if (counter >= Object.keys(data_json.AssessmentQuestions.ads).length){
-    // This is where the end assessment would be!
     counter = Object.keys(data_json.AssessmentQuestions.ads).length - 1;
+    onEndAssesment();
     return;
   }
   else {
@@ -90,51 +87,25 @@ function next(){
   }
 
   // get all the elements to be modified
-  let phish_button = document.getElementById("phishButton") as HTMLElement
-  let legit_button = document.getElementById("legitButton") as HTMLElement
-  let continue_button = document.getElementById("continueButton") as HTMLElement
+  resetButtons();
 
   let image_element = document.getElementById("example_image") as HTMLImageElement
   image_element.src=data_json.AssessmentQuestions.ads[counter].location
-
-  // reset CSS
-  phish_button.style.background="blue"
-  legit_button.style.background="blue"
-  continue_button.style.visibility="hidden"
 }
-
-import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
-
-    <div id="topBar" className={""}>
-      <h1 className={""}>Cybersecurity Assessment</h1> 
-      <Link href="/home">
-          <button className={"bg-cyan-800 hover:bg-cyan-700"}>Home</button>
-      </Link>
-      <Link href="/">
-        <button className={"bg-red-600 hover:bg-red-500 mr-2"}>Logout</button>
-      </Link> 
-    </div>
-
     <div className={"assessment-body"}>
           <div id="questionBox">
-
             <img id="example_image" src="/ads/ad1.png"></img>
             <div className={"assessment-buttons sm:flex-row"}>
                 <button id="phishButton" onClick={onPhishingSelected} className={""}>Phishing</button>
                 <button id="legitButton" onClick={onLegitSelected} className={""}>Legit</button>
                 <button id="continueButton" className ="buttonHidden" onClick={next}>Continue</button>
             </div>
-
-
           </div>
-
         </div>
-      
-
     </main>
   );
 }
