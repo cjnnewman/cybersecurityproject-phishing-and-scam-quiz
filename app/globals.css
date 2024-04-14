@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
+
 body {
-    background-image: url("../public/fgcu.jpeg");
+    background-image: url("../public/Project4background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
 
 }
-*/
+
 p{
     font-size: 1.5em;
  }
