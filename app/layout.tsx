@@ -13,39 +13,39 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({
-  children,
-}: {
+                                           children,
+                                         }: {
   children: React.ReactNode;
 }) {
   const session = await getServerSession();
   return (
-    <html lang="en">
-      <body className="bg-gradient-to-r from-blue-500 to-teal-700"> 
-        <nav>
-          <div className="topBar">
-            {!!session && <Logout />}
-            {!session && <Link href="/login-register">Login</Link>}
-            <div className="container">
-              <div className="boxLeft">
-                <h1>Cybersecurity Assessment</h1> 
-              </div>
-              <div className="boxRight">
-                <Link href="/">
-                  <button className="button">Welcome</button>
-                </Link> 
-                <Link href="/">
-                  <button className="button">Home</button>
-                </Link> 
-                <Link href="/">
-                  <button className="button">Logout</button>
-                </Link> 
-              </div>
+      <html lang="en">
+      <body>
+      <nav>
+        <div className="topBar">
+          {!!session && <Logout />}
+          {!session && <Link href="/login-register">Login</Link>}
+          <div className="container">
+            <div className="boxLeft">
+              <h1>Cybersecurity Assessment</h1>
+            </div>
+            <div className="boxRight">
+              <Link href="/">
+                <button className="button">Welcome</button>
+              </Link>
+              <Link href="/home">
+                <button className="button">Home</button>
+              </Link>
+              <Link href="/">
+                <button className="button">Logout</button>
+              </Link>
             </div>
           </div>
-          
-        </nav>
-        {children}
+        </div>
+
+      </nav>
+      {children}
       </body>
-    </html>
+      </html>
   );
 }
