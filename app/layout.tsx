@@ -20,7 +20,7 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="en">
-      <body className="bg-gradient-to-r from-blue-500 to-teal-700"> 
+      <body> 
         <nav>
           <div className="topBar">
             {!!session && <Logout />}
