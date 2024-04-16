@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1{
+    
+    background-color: #05095A;
+   
+    width: 100vw;
+    text-align: center;
+    color: white;
+    padding-top: auto;
+    padding-bottom: auto;
+    font-size: 3em;
+    
+    
+    
+}
+p{
+    background-color: white;
+    padding: 15px 10px;
+    max-width: 500px;
+    border-radius: 5px;
+
+}
+
+body{
+    background-image: url(/images/fgcu-gradient.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+
+}
+.welcomeBox div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.welcomeBox{
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 5px;
+    gap: 10px;
+
+}
+.welcomeButton{
+    margin-left:5px ;
+    padding:  10px;
+    background-color: #05095A;
+    border-radius: 5px;
+    color: #fff;
+} 
