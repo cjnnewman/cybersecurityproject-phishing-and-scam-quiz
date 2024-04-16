@@ -39,6 +39,7 @@ export default async function RootLayout({
               <Link href="/">
                 <button className="button">Logout</button>
               </Link>
+
             </div>
           </div>
         </div>
