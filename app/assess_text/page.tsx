@@ -11,6 +11,9 @@ let answerSelected: boolean = false;
 
 // Backend team look here: \/\/\/\/\/\/\/\/\/\/\/\/\/
 function onEndAssesment() {
+  let continue_button = document.getElementById("continueButton") as HTMLButtonElement;
+  continue_button.onmousemove = () => {
+    window.location.href = "/home";};
   // Put end assessment logic here.
 }
 
