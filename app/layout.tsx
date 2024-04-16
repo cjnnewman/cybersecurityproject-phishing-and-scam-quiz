@@ -23,8 +23,6 @@ export default async function RootLayout({
       <body>
       <nav>
         <div className="topBar">
-          {!!session && <Logout />}
-          {!session && <Link href="/login-register">Login</Link>}
           <div className="container">
             <div className="boxLeft">
               <h1>Cybersecurity Assessment</h1>
@@ -36,10 +34,10 @@ export default async function RootLayout({
               <Link href="/home">
                 <button className="button">Home</button>
               </Link>
-              <Link href="/">
-                <button className="button">Logout</button>
-              </Link>
-
+              {!!session && <Logout />}
+              {!session && <Link href="/login-register">
+                <button className='button'>Login</button>
+                </Link>}
             </div>
           </div>
         </div>
