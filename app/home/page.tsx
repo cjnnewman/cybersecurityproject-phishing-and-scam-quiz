@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { GetTestScores } from "../handlers/getTestScores";
+import { Suspense } from "react";
 
 // will need to have page auto call DB fetch function to fill the following variables
 let email_score = 4
 let text_score = 3
-let ads_score = 5
 
 // update these with the max assessment score
 let email_size = 5
@@ -38,10 +39,12 @@ export default function Home() {
               </div>
             </div>
             <div id="ads" className="homeBox">
+              <Suspense>
               <div className="containerLeft">
                 <p>Scam advertisements assessment</p>
-                <p className="border-8">Assessment score: {ads_score} / {ad_size}</p>
+                <p className="border-8">Assessment score: {GetTestScores('ads')} / {ad_size}</p>
               </div>
+              </Suspense>
               <div className="containerRight">
                 <Link href="/assess_ads">
                   <button className="button">Scam Ads</button>
