@@ -19,7 +19,7 @@ export default function Home() {
             <div id="Email" className="homeBox">
               <div className="containerLeft">
                 <p>Phishing email assessment</p>
-                <p className="border-8">Assessment score: {email_score} / {email_size}</p>
+                <p className="border-8">Assessment score: {GetTestScores('email')} / {email_size}</p>
               </div>
               <div className="containerRight">
                 <Link href="/assess_email">
@@ -30,7 +30,7 @@ export default function Home() {
             <div id="text" className="homeBox">
               <div className="containerLeft">
                 <p>Phishing Text assessment</p>
-                <p className="border-8" >Assessment score: {text_score} / {text_size} </p>
+                <p className="border-8" >Assessment score: {GetTestScores('text')} / {text_size} </p>
               </div>
               <div className="containerRight">
                 <Link href="/assess_text">
@@ -39,12 +39,10 @@ export default function Home() {
               </div>
             </div>
             <div id="ads" className="homeBox">
-              <Suspense>
               <div className="containerLeft">
                 <p>Scam advertisements assessment</p>
                 <p className="border-8">Assessment score: {GetTestScores('ads')} / {ad_size}</p>
               </div>
-              </Suspense>
               <div className="containerRight">
                 <Link href="/assess_ads">
                   <button className="button">Scam Ads</button>

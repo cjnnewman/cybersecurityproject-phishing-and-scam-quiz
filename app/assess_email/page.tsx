@@ -1,7 +1,9 @@
 "use client"
 import data_json from '../../public/data.json';
+import { UpdateTestScore } from '../handlers/handleScoreUpdate';
 
 const assessmentQuestions = data_json.AssessmentQuestions.emails;
+const assessmentType: string = 'email';
 
 var counter = 0;
 
@@ -15,6 +17,8 @@ function onEndAssesment() {
   continue_button.onmousemove = () => {
     window.location.href = "/home";};
   // Put end assessment logic here.
+
+  UpdateTestScore(assessmentType, correct, 5);
 }
 
 function updateCorrectCounters(wasCorrect: boolean) {
