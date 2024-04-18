@@ -15,7 +15,7 @@ export default async function LoginRegisterPage() {
           <label>Register an Account:</label>
           <p></p>
             <Link href="/signup">
-                <button>Sign Up</button>
+                <button id="signup_button">Sign Up</button>
               </Link> 
           </div>
               
@@ -23,7 +23,7 @@ export default async function LoginRegisterPage() {
           <label>Continue with Existing Account:</label>
           <p></p>
             <Link href="/login">
-                <button>Log In</button>
+                <button id="login_button">Log In</button>
               </Link> 
           </div>
           </div>

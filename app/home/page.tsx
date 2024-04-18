@@ -19,33 +19,33 @@ export default function Home() {
             <div id="Email" className="homeBox">
               <div className="containerLeft">
                 <p>Phishing email assessment</p>
-                <p className="border-8">Assessment score: {GetTestScores('email')} / {email_size}</p>
+                <p id="email_score" className="border-8">Assessment score: {GetTestScores('email')} / {email_size}</p>
               </div>
               <div className="containerRight">
                 <Link href="/assess_email">
-                  <button className="button">Email</button>
+                  <button id="email_assess_button" className="button">Email</button>
                 </Link>
               </div>
             </div>
             <div id="text" className="homeBox">
               <div className="containerLeft">
                 <p>Phishing Text assessment</p>
-                <p className="border-8" >Assessment score: {GetTestScores('text')} / {text_size} </p>
+                <p id="test_score" className="border-8" >Assessment score: {GetTestScores('text')} / {text_size} </p>
               </div>
               <div className="containerRight">
                 <Link href="/assess_text">
-                  <button className="button">Text</button>
+                  <button id="text_assess_button" className="button">Text</button>
                 </Link>
               </div>
             </div>
             <div id="ads" className="homeBox">
               <div className="containerLeft">
                 <p>Scam advertisements assessment</p>
-                <p className="border-8">Assessment score: {GetTestScores('ads')} / {ad_size}</p>
+                <p id="ads_score" className="border-8">Assessment score: {GetTestScores('ads')} / {ad_size}</p>
               </div>
               <div className="containerRight">
                 <Link href="/assess_ads">
-                  <button className="button">Scam Ads</button>
+                  <button id="ads_assess_button" className="button">Scam Ads</button>
                 </Link>
               </div>
             </div>

@@ -29,14 +29,14 @@ export default async function RootLayout({
             </div>
             <div className="boxRight">
               <Link href="/">
-                <button className="button">Welcome</button>
+                <button id="welcome_button" className="button">Welcome</button>
               </Link>
               <Link href="/home">
-                <button className="button">Home</button>
+                <button id="home_button" className="button">Home</button>
               </Link>
               {!!session && <Logout />}
               {!session && <Link href="/login-register">
-                <button className='button'>Login</button>
+                <button id="login_button" className='button'>Login</button>
                 </Link>}
             </div>
           </div>

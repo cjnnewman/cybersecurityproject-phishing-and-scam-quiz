@@ -132,7 +132,7 @@ export default function Home() {
           <label>Continue with Existing Account:</label>
           <p></p>
             <Link href="/login">
-                <button>Log In</button>
+                <button id="login_button">Log In</button>
               </Link> 
           </div>
           </div>

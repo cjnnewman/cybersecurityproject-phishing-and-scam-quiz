@@ -62,7 +62,7 @@ export default function Home() {
               <label>Register an Account:</label>
               <p></p>
                 <Link href="/signup">
-                    <button>Sign Up</button>
+                    <button id="signup_button">Sign Up</button>
                   </Link> 
             </div>
           </div>

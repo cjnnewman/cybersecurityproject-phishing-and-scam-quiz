@@ -13,7 +13,7 @@ export default function Home() {
       <div>
         <Image className="image" src="/shocked_man_with_phone.jpeg" alt="image of a shocked man with phone in hand" width={500} height={1000} />
         <Link href="/login-register">
-          <button className="button">Continue to Site!</button>
+          <button id="continue_button" className="button">Continue to Site!</button>
         </Link>
       </div>
     </div>
