@@ -60,8 +60,8 @@
             {
                 "location": "/texts/text5.png",
                 "location_annotate": "/texts/text5a.png", 
-                "phishing": true,
-                "legit":false
+                "phishing": false,
+                "legit":true
             }
         ],
         "ads":[
