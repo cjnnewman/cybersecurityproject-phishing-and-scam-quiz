@@ -11,9 +11,8 @@ let answerSelected: boolean = false;
 
 // Backend team look here: \/\/\/\/\/\/\/\/\/\/\/\/\/
 function onEndAssesment() {
-  let continue_button = document.getElementById("continueButton") as HTMLButtonElement;
-  continue_button.onmousemove = () => {
-    window.location.href = "/home";};
+  let a = document.getElementById("email") as HTMLLinkElement;
+  a.setAttribute("href", "/home");
   // Put end assessment logic here.
 }
 
@@ -105,9 +104,11 @@ export default function assess_email() {
             <div id="questionBox">
               <img id="example_image" src="/emails/email1.png"></img>
               <div className={"assessment-buttons sm:flex-row"}>
-                  <button id="phishButton" onClick={onPhishingSelected} className={""}>Phishing</button>
-                  <button id="legitButton" onClick={onLegitSelected} className={""}>Legit</button>
-                  <button id="continueButton" className ="buttonHidden" onClick={next}>Continue</button>
+                <button id="phishButton" onClick={onPhishingSelected} className={""}>Phishing</button>
+                <button id="legitButton" onClick={onLegitSelected} className={""}>Legit</button>
+                <a id="email">
+                  <button id="continueButton" className="buttonHidden" onClick={next}>Continue</button>
+                </a>
               </div>
             </div>
           </div>

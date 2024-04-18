@@ -11,9 +11,9 @@ let answerSelected: boolean = false;
 
 // Backend team look here: \/\/\/\/\/\/\/\/\/\/\/\/\/
 function onEndAssesment() {
-  let continue_button = document.getElementById("continueButton") as HTMLButtonElement;
-  continue_button.onmousemove = () => {
-    window.location.href = "/home";};
+
+  let a = document.getElementById("text") as HTMLLinkElement;
+  a.setAttribute("href", "/home");
   // Put end assessment logic here.
 }
 
@@ -81,6 +81,7 @@ function next(){
   if (counter >= Object.keys(assessmentQuestions).length - 1) {
     let continue_button = document.getElementById("continueButton") as HTMLButtonElement;
     continue_button.textContent = "End Assessment";
+
   }
   if (counter >= Object.keys(assessmentQuestions).length){
     counter = Object.keys(assessmentQuestions).length - 1;
@@ -107,7 +108,9 @@ export default function assess_text() {
             <div className={"assessment-buttons sm:flex-row"}>
                 <button id="phishButton" onClick={onPhishingSelected} className={""}>Phishing</button>
                 <button id="legitButton" onClick={onLegitSelected} className={""}>Legit</button>
+              <a id ="text">
                 <button id="continueButton" className ="buttonHidden" onClick={next}>Continue</button>
+                </a>
             </div>
           </div>
         </div>
