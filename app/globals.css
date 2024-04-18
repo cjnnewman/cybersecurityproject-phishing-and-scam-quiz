@@ -9,7 +9,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
-
 }
 
 p{
@@ -142,7 +141,7 @@ p{
 
 img {
     object-fit: contain;
-    max-height: 800px;
+    max-height: 700px;
     flex-grow: initial;
     border-radius: 0.25rem;
 }
@@ -191,3 +190,32 @@ button:hover {
 .buttonHidden {
     visibility: hidden;
 }
+
+
+/*-----------Richard login page -----------*/
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    /*content: "&#10004;";*/
+  }
+  
+  /* Add a red text color and an "x" icon when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    /*content: "&#10006;";*/
+  }
+  
+  .hide {
+    visibility: hidden;
+  }
