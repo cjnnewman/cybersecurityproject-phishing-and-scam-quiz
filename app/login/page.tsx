@@ -21,7 +21,7 @@ export default function Home() {
     });
 
     if (!response?.error) {
-      router.push('./dashboard');
+      router.push('./home');
       router.refresh();
     } else {
       setErrorMessage('Invalid Credentials');
