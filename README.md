@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Cybersecurity Awareness Assessment site
 
-## Getting Started
+<img width="1490" alt="image" src="https://github.com/cjnnewman/cybersecurityproject-phishing-and-scam-quiz/assets/122639149/0c67560e-c460-4068-bb6c-425b156a61db">
 
-First, run the development server:
+This is the repository for the CEN 3073 Computer security Project 4 Team 1 project files. Our project is a web application using NextJS that is an assessment for individuals to test their ability to detect and determine different forms of phishing and malicous content that most people will encounter. The site does require individuals to sign up for access to the project, this is so that assessment scores are saved for each member that attemps the assessment quiz. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Contributors:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Role | Individual
+------------- | -------------
+TeamLead / UIUX / FEDev | William Ward ​
+Business Analyst | Julio Lapon ​
+Front-End Dev 1 | Jacob McCormack ​
+Front-End Dev 2 | Lentz Fortune ​
+Front-End Dev 3 | Richard Beuck​
+Back-End Dev 1 | Caleb Newman ​
+Back-End Dev 2 | George Alenchery ​
+Back-End Dev 3 | Lee Bernard ​
+Back-end Dev 4 | Julio Santamaria ​
+Tester/Security Analyst | Jeremy Clark ​
+Tester/Security Analyst | Keyan Ridgeway​
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## About the app:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="1596" alt="image" src="https://github.com/cjnnewman/cybersecurityproject-phishing-and-scam-quiz/assets/122639149/6ffad84b-c797-4dde-98b8-1c8c3f806011">
