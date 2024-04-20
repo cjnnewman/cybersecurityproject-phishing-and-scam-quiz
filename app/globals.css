@@ -219,3 +219,47 @@ button:hover {
   .hide {
     visibility: hidden;
   }
+  .lentzParagraph{
+    background-color: white;
+    padding: 15px 10px;
+    max-width: 500px;
+    border-radius: 5px;
+
+}
+
+.lentzBackground{
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/fgcu-gradient.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+
+}
+.lentz div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.lentz{
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 5px;
+    gap: 10px;
+
+}
+.lentzButton{
+    margin-left:5px ;
+    padding:  10px;
+    background-color: #05095A;
+    border-radius: 5px;
+    color: #fff;
+} 
+.imageLentz{
+    padding:  0;
+    margin: 0;
+}
