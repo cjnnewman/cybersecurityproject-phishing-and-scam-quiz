@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <main>
       <div>
-          <div id="questionBox" className="div2">
+          <div id="questionBox" className="div3">
             <div>
             <form onSubmit={handleSubmit}>
               <div className="user">

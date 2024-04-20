@@ -88,7 +88,7 @@ export default function Home() {
   return (
     <main>
       <div>
-          <div id="questionBox" className="div2">
+          <div id="questionBox" className="div3">
             <div>
             <form onSubmit={handleSubmit}>
               <div className="user">
@@ -119,7 +119,7 @@ export default function Home() {
             </form>
 
             <div id="message" className="req">
-              <h3>Password must contain the following:</h3>
+              <h3 className="asdf">Password must contain the following:</h3>
               <p id="capital" className="invalid">A <b>capital (uppercase)</b> letter</p>
               <p id="letter" className="invalid">A <b>lowercase</b> letter</p>
               <p id="number" className="invalid">A <b>number</b></p>

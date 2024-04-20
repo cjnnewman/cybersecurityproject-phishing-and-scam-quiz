@@ -10,7 +10,7 @@ export default async function LoginRegisterPage() {
   return (
     <main>
       <div>
-          <div id="questionBox" className="div2">
+          <div id="questionBox" className="div3">
           <div className="loginbuttons">
           <label>Register an Account:</label>
           <p></p>
