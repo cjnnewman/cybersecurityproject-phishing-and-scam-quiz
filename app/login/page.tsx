@@ -35,7 +35,7 @@ export default function Home() {
             <div>
             <form onSubmit={handleSubmit}>
               <div className="user">
-                <label>Username</label>
+                <label>Email</label>
                 <p></p>
                 <input 
                 type="email" 
