@@ -92,7 +92,7 @@ export default function Home() {
             <div>
             <form onSubmit={handleSubmit}>
               <div className="user">
-                <label>Username</label>
+                <label>Email Address</label>
                 <p></p>
                 <input 
                 type="text" 
